@@ -18,6 +18,9 @@ connectDB();
 // Route Files
 const app = express();
 
+// Body Parser
+app.use(express.json());
+
 // DEV Logging middleware
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
